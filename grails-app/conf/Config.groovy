@@ -95,6 +95,11 @@ environments {
     }
 }
 
+pinnaclesports {
+    login = "LZ765565"
+    password = "4567erty!"
+}
+
 // log4j configuration
 log4j.main = {
     // Example of changing the log pattern for the default console appender:
