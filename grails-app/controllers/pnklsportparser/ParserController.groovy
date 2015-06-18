@@ -15,6 +15,7 @@ class ParserController {
     
     static final URL_CLIENT_BALANCE = "client/balance"
     static final URL_SPORTS = "sports"
+    static final URL_LEAGUES = "leagues"
     
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -31,7 +32,7 @@ class ParserController {
         }
      **/
     def getBalance(){
-      def http = new HTTPBuilder('https://api.pinnaclesports.com/v1/')
+      def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
       def resp =  http.get(path: this.URL_CLIENT_BALANCE) 
       def jsonresp = new JsonBuilder()
@@ -94,9 +95,51 @@ class ParserController {
             </rsp>
      **/
     def getSports(){
-       def http = new HTTPBuilder('https://api.pinnaclesports.com/v1/')
+       def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
        http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
        def resp =  http.get(path: this.URL_SPORTS) 
+       render XmlUtil.serialize(resp)   
+    }
+    /**
+         @return data in xml format
+            <?xml version="1.0" encoding="UTF-8"?><rsp status="ok">
+              <sportId>3</sportId>
+              <leagues>
+                <league feedContents="0" homeTeamType="Team2" id="214" allowRoundRobins="1">MLB Alternate Runlines</league>
+                <league feedContents="0" homeTeamType="Team2" id="216" allowRoundRobins="0">All Star Friendlies</league>
+                <league feedContents="0" homeTeamType="Team2" id="217" allowRoundRobins="1">Asia Series</league>
+                <league feedContents="0" homeTeamType="Team2" id="218" allowRoundRobins="1">Asian Games - World</league>
+                <league feedContents="1" homeTeamType="Team2" id="220" allowRoundRobins="1">NCAA Baseball</league>
+                <league feedContents="0" homeTeamType="Team2" id="225" allowRoundRobins="1">European Championships</league>
+                <league feedContents="0" homeTeamType="Team2" id="231" allowRoundRobins="0">Italy - Serie A1</league>
+                <league feedContents="0" homeTeamType="Team2" id="232" allowRoundRobins="1">Japan - All Star</league>
+                <league feedContents="1" homeTeamType="Team2" id="233" allowRoundRobins="1">Japan - Central League</league>
+                <league feedContents="0" homeTeamType="Team2" id="234" allowRoundRobins="1">Japan - Inter League</league>
+                <league feedContents="0" homeTeamType="Team2" id="235" allowRoundRobins="1">Japan Baseball LIVE</league>
+                <league feedContents="1" homeTeamType="Team2" id="236" allowRoundRobins="1">Japan - Pacific League</league>
+                <league feedContents="0" homeTeamType="Team2" id="237" allowRoundRobins="1">Nippon Series (Championship)</league>
+                <league feedContents="0" homeTeamType="Team2" id="238" allowRoundRobins="0">Konami Cup Asia Series</league>
+                <league feedContents="1" homeTeamType="Team2" id="6227" allowRoundRobins="1">Korea Professional Baseball</league>
+                <league feedContents="0" homeTeamType="Team2" id="241" allowRoundRobins="1">Little League World Series</league>
+                <league feedContents="0" homeTeamType="Team2" id="244" allowRoundRobins="0">Mexican League</league>
+                <league feedContents="1" homeTeamType="Team2" id="246" allowRoundRobins="1">MLB</league>
+                <league feedContents="0" homeTeamType="Team2" id="5425" allowRoundRobins="1">MLB - Pre Season</league>
+                <league feedContents="0" homeTeamType="Team2" id="251" allowRoundRobins="1">Baseball Games</league>
+                <league feedContents="0" homeTeamType="Team2" id="252" allowRoundRobins="1">Olympic Qualifier</league>
+                <league feedContents="0" homeTeamType="Team2" id="255" allowRoundRobins="1">Pan American Games</league>
+                <league feedContents="0" homeTeamType="Team2" id="256" allowRoundRobins="1">Campeonato Nacional de Beisbol Mayor</league>
+                <league feedContents="0" homeTeamType="Team2" id="257" allowRoundRobins="1">Serie Del Caribe</league>
+                <league feedContents="0" homeTeamType="Team2" id="11689" allowRoundRobins="0">testing 5</league>
+                <league feedContents="0" homeTeamType="Team2" id="264" allowRoundRobins="1">WNCAA Softball</league>
+                <league feedContents="0" homeTeamType="Team2" id="265" allowRoundRobins="0">World Cup Baseball</league>
+                <league feedContents="0" homeTeamType="Team2" id="266" allowRoundRobins="1">World Baseball Classic</league>
+              </leagues>
+            </rsp>
+     **/
+    def getLeagues(){
+       def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
+       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
+       def resp =  http.get(path: this.URL_LEAGUES, query: [sportid: cm.config.betsparams.sportid]) 
        render XmlUtil.serialize(resp)   
     }
     

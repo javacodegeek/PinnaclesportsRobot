@@ -11,12 +11,11 @@ class UrlMappings {
         "500"(view:'/error')
         
         "/client/balance"(controller:"parser", action: "getBalance")
-        
-
         "/sports"(controller:"parser", action: "getSports")
+        "/leagues"(controller:"parser", action: "getLeagues")
 
 
-                "/soccer"(controller:"parser", action: "getAllSoccerEvents")
+        "/soccer"(controller:"parser", action: "getAllSoccerEvents")
 
 
 	}

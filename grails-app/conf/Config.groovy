@@ -101,6 +101,12 @@ pinnaclesports {
     apiurl = "https://api.pinnaclesports.com/v1/"
 }
 
+
+betsparams {
+    sportid = "3"
+}
+
+
 // log4j configuration
 log4j.main = {
     // Example of changing the log pattern for the default console appender:
