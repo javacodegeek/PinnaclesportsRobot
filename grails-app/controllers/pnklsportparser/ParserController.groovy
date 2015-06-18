@@ -158,9 +158,20 @@ class ParserController {
        def resp =  http.get(path: this.URL_FIXTURES, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
        def jsonresp = new JsonBuilder()
        def jdata = jsonresp(resp)    
-       jdata.league.each{league ->
-           println league
+       /*jdata.league.each{ league ->
+            league.events.each{ event ->
+                new Fixture(eventId: event.id,
+                            leagueId: league.id,
+                            home: event.home,
+                            away: event.away,
+                            rotNum: event.rotNum,
+                            liveStatus: event.liveStatus,
+                            status: event.status,
+                            starts: event.starts
+                ).save()
+            }
        }
-       //render jsonresp
+       println Fixture.findAll().size()*/
+       //render jsonresp(resp)
     }
 }
