@@ -104,7 +104,7 @@ pinnaclesports {
 
 betsparams {
     sportid = "29"
-    leagueIds = "1872"
+    leagueIds = "1872,2620"
 }
 
 

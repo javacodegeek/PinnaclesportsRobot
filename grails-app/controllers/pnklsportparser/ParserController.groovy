@@ -157,7 +157,10 @@ class ParserController {
        http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
        def resp =  http.get(path: this.URL_FIXTURES, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
        def jsonresp = new JsonBuilder()
-       jsonresp(resp)
-       render jsonresp
+       def jdata = jsonresp(resp)    
+       jdata.league.each{league ->
+           println league
+       }
+       //render jsonresp
     }
 }
