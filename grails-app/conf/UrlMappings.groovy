@@ -10,7 +10,14 @@ class UrlMappings {
         "/"(view:"/index")
         "500"(view:'/error')
         
-        "/balance"(controller:"parser", action: "getBalance")
+        "/client/balance"(controller:"parser", action: "getBalance")
+        
+
+        "/sports"(controller:"parser", action: "getSports")
+
+
+                "/soccer"(controller:"parser", action: "getAllSoccerEvents")
+
 
 	}
 }

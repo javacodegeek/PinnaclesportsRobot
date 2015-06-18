@@ -98,6 +98,7 @@ environments {
 pinnaclesports {
     login = "LZ765565"
     password = "4567erty!"
+    apiurl = "https://api.pinnaclesports.com/v1/"
 }
 
 // log4j configuration
