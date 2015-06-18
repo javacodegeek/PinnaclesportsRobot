@@ -16,6 +16,9 @@ class ParserController {
     static final URL_CLIENT_BALANCE = "client/balance"
     static final URL_SPORTS = "sports"
     static final URL_LEAGUES = "leagues"
+    static final URL_ODDS = "odds"
+    static final URL_FIXTURES = "fixtures"
+
     
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -37,7 +40,6 @@ class ParserController {
       def resp =  http.get(path: this.URL_CLIENT_BALANCE) 
       def jsonresp = new JsonBuilder()
       jsonresp(resp)
-      //render XmlUtil.serialize(resp)
       render jsonresp
     }
     /**
@@ -142,8 +144,20 @@ class ParserController {
        def resp =  http.get(path: this.URL_LEAGUES, query: [sportid: cm.config.betsparams.sportid]) 
        render XmlUtil.serialize(resp)   
     }
-    
-    def getAllSoccerEvents(){
-     
+    def getOdds(){
+       def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
+       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
+       def resp =  http.get(path: this.URL_ODDS, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
+       def jsonresp = new JsonBuilder()
+       jsonresp(resp)
+       render jsonresp
+    }
+    def getFixtures(){
+       def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
+       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
+       def resp =  http.get(path: this.URL_FIXTURES, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
+       def jsonresp = new JsonBuilder()
+       jsonresp(resp)
+       render jsonresp
     }
 }

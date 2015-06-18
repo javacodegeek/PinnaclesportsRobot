@@ -13,6 +13,9 @@ class UrlMappings {
         "/client/balance"(controller:"parser", action: "getBalance")
         "/sports"(controller:"parser", action: "getSports")
         "/leagues"(controller:"parser", action: "getLeagues")
+        "/odds"(controller:"parser", action: "getOdds")
+        "/fixtures"(controller:"parser", action: "getFixtures")
+
 
 
         "/soccer"(controller:"parser", action: "getAllSoccerEvents")

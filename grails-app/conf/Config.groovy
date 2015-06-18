@@ -103,7 +103,8 @@ pinnaclesports {
 
 
 betsparams {
-    sportid = "3"
+    sportid = "29"
+    leagueIds = "1872"
 }
 
 

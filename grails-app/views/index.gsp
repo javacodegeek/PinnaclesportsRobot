@@ -14,8 +14,10 @@
         <title>Sample title</title>
     </head>
     <body>
-        <h1>Sample line</h1>
-                <h1>${cm.config.pinnaclesports.login}</h1>
-
+        <a href="client/balance">CLIENT BALANCE</a></br>
+        <a href="sports">SPORTS</a></br>
+        <a href="leagues">LEAGUES</a></br>
+        <a href="odds">ODDS</a></br>
+        <a href="fixtures">FIXTURES</a></br>
     </body>
 </html>
