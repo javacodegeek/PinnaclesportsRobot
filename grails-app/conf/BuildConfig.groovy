@@ -42,15 +42,16 @@ grails.project.dependency.resolution = {
         mavenCentral()
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         mavenRepo "http://repository.codehaus.org"
+        //mysqlRepo "http://dev.mysql.com/usingmysql/java/"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
     }
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        // runtime 'mysql:mysql-connector-java:5.1.29'
-        // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
+        runtime "mysql:mysql-connector-java:5.1.35"
+
     }
 
     plugins {
@@ -63,11 +64,12 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:1.9.6"
         compile ":quartz:1.0.2"
         runtime ":rest:0.8"
-
+        compile ":jdbc-pool:7.0.47"
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.5.5" // or ":hibernate:3.6.10.17"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
+        //runtime ":mysql-connectorj:5.1.35"
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"

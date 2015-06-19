@@ -10,6 +10,7 @@ import groovyx.net.http.RESTClient
 import static groovyx.net.http.ContentType.*
 import groovy.xml.XmlUtil
 import groovy.json.JsonBuilder
+import grails.converters.JSON
 
 @Transactional
 class ParserService {
@@ -52,9 +53,9 @@ class ParserService {
             league.events.each{ event ->
                 new SoccerOdd(eventId: event.id,
                               leagueId: league.id,
-                              period0: event.periods[0],
-                              period1: event.periods[1],
-                              period2: event.periods[2],
+                              period0: event.periods[0] as JSON,
+                              period1: event.periods[1] as JSON,
+                              period2: event.periods[2] as JSON,
                 ).save()
             }
        }
