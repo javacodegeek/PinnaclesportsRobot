@@ -41,4 +41,23 @@ class ParserService {
        }
        return true
     }
+    
+    def saveSoccerOdds() {
+       def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
+       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
+       def resp =  http.get(path: this.URL_ODDS, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
+       def jsonresp = new JsonBuilder()
+       def jdata = jsonresp(resp)    
+       jdata.leagues.each{ league ->
+            league.events.each{ event ->
+                new SoccerOdd(eventId: event.id,
+                              leagueId: league.id,
+                              period0: event.periods[0],
+                              period1: event.periods[1],
+                              period2: event.periods[2],
+                ).save()
+            }
+       }
+       return true
+    }
 }
