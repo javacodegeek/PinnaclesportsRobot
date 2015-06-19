@@ -5,16 +5,15 @@ class LineParsingJob {
     
     ParserService parserService
 
-
     static triggers = {
-        cron name: 'Trigger', startDelay: 10000, cronExpression: '0 44 00 ? * *'
+        cron name: 'Trigger', startDelay: 10000, cronExpression: '0 15 01 ? * *'
     }
     def execute() {
       println "Run LineParsingJob!" 
       parserService.saveFixtures() 
-      println Fixture.findAll().size()
+      println Fixture.count()
       parserService.saveSoccerOdds() 
-      println SoccerOdd.findAll().size()
+      println SoccerOdd.count()
     }
 
 }

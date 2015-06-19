@@ -95,19 +95,6 @@ environments {
     }
 }
 
-pinnaclesports {
-    login = "LZ765565"
-    password = "4567erty!"
-    apiurl = "https://api.pinnaclesports.com/v1/"
-}
-
-
-betsparams {
-    sportid = "29"
-    leagueIds = "1872,2620"
-}
-
-
 // log4j configuration
 log4j.main = {
     // Example of changing the log pattern for the default console appender:
