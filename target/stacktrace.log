@@ -35388,3 +35388,604 @@ org.springframework.beans.factory.BeanCreationNotAllowedException: Error creatin
 	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure2_closure13.doCall(HibernatePluginSupport.groovy:415)
 	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure2.doCall(HibernatePluginSupport.groovy:436)
 	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:21:49,527 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.NotReadablePropertyException: Invalid property 'pinnacleLogin' of bean class [pnklsportparser.DefaultValue]: Bean property 'pinnacleLogin' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at org.springframework.beans.BeanWrapperImpl.getPropertyValue(BeanWrapperImpl.java:725)
+	at org.springframework.beans.BeanWrapperImpl.getPropertyValue(BeanWrapperImpl.java:716)
+	at org.codehaus.groovy.grails.validation.GrailsDomainClassValidator.validatePropertyWithConstraint(GrailsDomainClassValidator.java:209)
+	at org.codehaus.groovy.grails.validation.GrailsDomainClassValidator.validate(GrailsDomainClassValidator.java:79)
+	at org.codehaus.groovy.grails.orm.hibernate.validation.HibernateDomainClassValidator.validate(HibernateDomainClassValidator.java:68)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:173)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:68)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormInstanceApi.groovy:195)
+	at pnklsportparser.DefaultValue.save(DefaultValue.groovy)
+	at pnklsportparser.DefaultValue$save$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:6)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1081)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:417)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:78)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:110)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:21:49,529 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.NotReadablePropertyException: Invalid property 'pinnacleLogin' of bean class [pnklsportparser.DefaultValue]: Bean property 'pinnacleLogin' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at BootStrap$_closure1.doCall(BootStrap.groovy:6)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:21:49,529 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.NotReadablePropertyException: Invalid property 'pinnacleLogin' of bean class [pnklsportparser.DefaultValue]: Bean property 'pinnacleLogin' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at BootStrap$_closure1.doCall(BootStrap.groovy:6)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:21:49,529 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.NotReadablePropertyException: Invalid property 'pinnacleLogin' of bean class [pnklsportparser.DefaultValue]: Bean property 'pinnacleLogin' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at BootStrap$_closure1.doCall(BootStrap.groovy:6)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:21:49,530 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.NotReadablePropertyException: Invalid property 'pinnacleLogin' of bean class [pnklsportparser.DefaultValue]: Bean property 'pinnacleLogin' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at BootStrap$_closure1.doCall(BootStrap.groovy:6)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:21:49,530 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.NotReadablePropertyException: Invalid property 'pinnacleLogin' of bean class [pnklsportparser.DefaultValue]: Bean property 'pinnacleLogin' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at BootStrap$_closure1.doCall(BootStrap.groovy:6)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:327)
+	at grails.util.Environment.executeForEnvironment(Environment.java:320)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:42:51,336 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1076)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1021)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:156)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.initializeContext(GrailsRuntimeConfigurator.java:188)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:168)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:164)
+	at org.codehaus.groovy.grails.commons.spring.OptimizedAutowireCapableBeanFactory$1.instantiate(OptimizedAutowireCapableBeanFactory.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1069)
+	... 26 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.DefaultValue.currentGormStaticApi(DefaultValue.groovy)
+	at pnklsportparser.DefaultValue.$static_methodMissing(DefaultValue.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaClassImpl.invokeStaticMissingMethod(MetaClassImpl.java:1493)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1481)
+	at groovy.lang.ExpandoMetaClass.invokeStaticMethod(ExpandoMetaClass.java:1123)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaClassSite.call(StaticMetaClassSite.java:50)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 28 more
+2015-06-20 00:42:51,338 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:164)
+	at org.codehaus.groovy.grails.commons.spring.OptimizedAutowireCapableBeanFactory$1.instantiate(OptimizedAutowireCapableBeanFactory.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1069)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1021)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:156)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.initializeContext(GrailsRuntimeConfigurator.java:188)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:168)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.DefaultValue.currentGormStaticApi(DefaultValue.groovy)
+	at pnklsportparser.DefaultValue.$static_methodMissing(DefaultValue.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaClassImpl.invokeStaticMissingMethod(MetaClassImpl.java:1493)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1481)
+	at groovy.lang.ExpandoMetaClass.invokeStaticMethod(ExpandoMetaClass.java:1123)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaClassSite.call(StaticMetaClassSite.java:50)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 28 more
+2015-06-20 00:42:51,339 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.DefaultValue.currentGormStaticApi(DefaultValue.groovy)
+	at pnklsportparser.DefaultValue.$static_methodMissing(DefaultValue.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaClassImpl.invokeStaticMissingMethod(MetaClassImpl.java:1493)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1481)
+	at groovy.lang.ExpandoMetaClass.invokeStaticMethod(ExpandoMetaClass.java:1123)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaClassSite.call(StaticMetaClassSite.java:50)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	at org.codehaus.groovy.grails.commons.spring.OptimizedAutowireCapableBeanFactory$1.instantiate(OptimizedAutowireCapableBeanFactory.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1069)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1021)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:156)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.initializeContext(GrailsRuntimeConfigurator.java:188)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:168)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:42:51,339 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	... 4 more
+2015-06-20 00:42:51,340 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	... 4 more
+2015-06-20 00:42:51,340 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	... 4 more
+2015-06-20 00:42:51,340 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:42:51,340 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	... 4 more
+2015-06-20 00:42:51,340 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	... 4 more
+2015-06-20 00:42:51,340 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	... 4 more
+2015-06-20 00:42:51,340 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:42:51,340 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:28)
+	... 4 more
+2015-06-20 00:44:20,395 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1076)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1021)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:156)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.initializeContext(GrailsRuntimeConfigurator.java:188)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:168)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:164)
+	at org.codehaus.groovy.grails.commons.spring.OptimizedAutowireCapableBeanFactory$1.instantiate(OptimizedAutowireCapableBeanFactory.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1069)
+	... 26 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.DefaultValue.currentGormStaticApi(DefaultValue.groovy)
+	at pnklsportparser.DefaultValue.$static_methodMissing(DefaultValue.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaClassImpl.invokeStaticMissingMethod(MetaClassImpl.java:1493)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1481)
+	at groovy.lang.ExpandoMetaClass.invokeStaticMethod(ExpandoMetaClass.java:1123)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaClassSite.call(StaticMetaClassSite.java:50)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 28 more
+2015-06-20 00:44:20,397 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:164)
+	at org.codehaus.groovy.grails.commons.spring.OptimizedAutowireCapableBeanFactory$1.instantiate(OptimizedAutowireCapableBeanFactory.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1069)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1021)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:156)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.initializeContext(GrailsRuntimeConfigurator.java:188)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:168)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.DefaultValue.currentGormStaticApi(DefaultValue.groovy)
+	at pnklsportparser.DefaultValue.$static_methodMissing(DefaultValue.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaClassImpl.invokeStaticMissingMethod(MetaClassImpl.java:1493)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1481)
+	at groovy.lang.ExpandoMetaClass.invokeStaticMethod(ExpandoMetaClass.java:1123)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaClassSite.call(StaticMetaClassSite.java:50)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 28 more
+2015-06-20 00:44:20,398 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.DefaultValue.currentGormStaticApi(DefaultValue.groovy)
+	at pnklsportparser.DefaultValue.$static_methodMissing(DefaultValue.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaClassImpl.invokeStaticMissingMethod(MetaClassImpl.java:1493)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1481)
+	at groovy.lang.ExpandoMetaClass.invokeStaticMethod(ExpandoMetaClass.java:1123)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaClassSite.call(StaticMetaClassSite.java:50)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:1002)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	at org.codehaus.groovy.grails.commons.spring.OptimizedAutowireCapableBeanFactory$1.instantiate(OptimizedAutowireCapableBeanFactory.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1069)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1021)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:156)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.initializeContext(GrailsRuntimeConfigurator.java:188)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:168)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:44:20,398 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	... 4 more
+2015-06-20 00:44:20,398 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	... 4 more
+2015-06-20 00:44:20,398 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	... 4 more
+2015-06-20 00:44:20,399 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:44:20,399 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	... 4 more
+2015-06-20 00:44:20,399 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	... 4 more
+2015-06-20 00:44:20,399 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	... 4 more
+2015-06-20 00:44:20,399 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-06-20 00:44:20,399 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pnklsportparser.ParserController': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [pnklsportparser.ParserController]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	... 4 more
+Caused by: java.lang.IllegalStateException: Method on class [pnklsportparser.DefaultValue] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	at pnklsportparser.ParserController.<init>(ParserController.groovy:29)
+	... 4 more

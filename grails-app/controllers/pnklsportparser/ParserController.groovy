@@ -10,6 +10,7 @@ import grails.util.Holders as cm
 import groovy.xml.XmlUtil
 import groovy.json.JsonBuilder
 
+import pnklsportparser.DefaultValue
 
 class ParserController {
     
@@ -25,6 +26,8 @@ class ParserController {
     def index() { 
     }
     
+    DefaultValue DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
+    
     /**
      @return data in json format 
         {
@@ -36,7 +39,7 @@ class ParserController {
      **/
     def getBalance(){
       def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
-      http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
+      http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
       def resp =  http.get(path: this.URL_CLIENT_BALANCE) 
       def jsonresp = new JsonBuilder()
       jsonresp(resp)
@@ -98,7 +101,7 @@ class ParserController {
      **/
     def getSports(){
        def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
-       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
+       http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
        def resp =  http.get(path: this.URL_SPORTS) 
        render XmlUtil.serialize(resp)   
     }
@@ -140,38 +143,8 @@ class ParserController {
      **/
     def getLeagues(){
        def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
-       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
-       def resp =  http.get(path: this.URL_LEAGUES, query: [sportid: cm.config.betsparams.sportid]) 
+       http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
+       def resp =  http.get(path: this.URL_LEAGUES, query: [sportid: ${DV.pinnacleSportId}]) 
        render XmlUtil.serialize(resp)   
-    }
-    def getOdds(){
-       def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
-       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
-       def resp =  http.get(path: this.URL_ODDS, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
-       def jsonresp = new JsonBuilder()
-       jsonresp(resp)
-       render jsonresp
-    }
-    def getFixtures(){
-       def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
-       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
-       def resp =  http.get(path: this.URL_FIXTURES, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
-       def jsonresp = new JsonBuilder()
-       def jdata = jsonresp(resp)    
-       /*jdata.league.each{ league ->
-            league.events.each{ event ->
-                new Fixture(eventId: event.id,
-                            leagueId: league.id,
-                            home: event.home,
-                            away: event.away,
-                            rotNum: event.rotNum,
-                            liveStatus: event.liveStatus,
-                            status: event.status,
-                            starts: event.starts
-                ).save()
-            }
-       }
-       println Fixture.findAll().size()*/
-       //render jsonresp(resp)
     }
 }

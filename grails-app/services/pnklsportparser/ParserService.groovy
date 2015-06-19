@@ -21,10 +21,13 @@ class ParserService {
     static final URL_ODDS = "odds"
     static final URL_FIXTURES = "fixtures"
     
+    DefaultValue DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
+    
     def saveFixtures() {
        def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
-       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
-       def resp =  http.get(path: this.URL_FIXTURES, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
+       
+       http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
+       def resp =  http.get(path: this.URL_FIXTURES, query: [sportid: ${DV.pinnacleSportId}, leagueIds: ${DV.pinnacleLeagueIds}]) 
        def jsonresp = new JsonBuilder()
        def jdata = jsonresp(resp)    
        jdata.league.each{ league ->
@@ -45,8 +48,8 @@ class ParserService {
     
     def saveSoccerOdds() {
        def http = new HTTPBuilder(cm.config.pinnaclesports.apiurl)
-       http.headers['Authorization'] = 'Basic '+"$cm.config.pinnaclesports.login:$cm.config.pinnaclesports.password".bytes.encodeBase64()
-       def resp =  http.get(path: this.URL_ODDS, query: [sportid: cm.config.betsparams.sportid, leagueIds: cm.config.betsparams.leagueIds]) 
+        http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
+       def resp =  http.get(path: this.URL_ODDS, query: [sportid: ${DV.pinnacleSportId}, leagueIds: ${DV.pinnacleLeagueIds}]) 
        def jsonresp = new JsonBuilder()
        def jdata = jsonresp(resp)    
        jdata.leagues.each{ league ->

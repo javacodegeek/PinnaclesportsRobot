@@ -7,7 +7,7 @@ class LineParsingJob {
 
 
     static triggers = {
-        cron name: 'Trigger', startDelay: 10000, cronExpression: '0 44 22 ? * *'
+        cron name: 'Trigger', startDelay: 10000, cronExpression: '0 44 00 ? * *'
     }
     def execute() {
       println "Run LineParsingJob!" 

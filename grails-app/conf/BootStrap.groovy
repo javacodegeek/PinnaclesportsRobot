@@ -3,7 +3,8 @@ import pnklsportparser.DefaultValue
 class BootStrap {
     def init = { servletContext ->
         if(!DefaultValue.count()){
-            new DefaultValue(pinnacleLogin: "LZ765565",
+            new DefaultValue(name: "PINNACLESPORTSROBOT",
+                             pinnacleLogin: "LZ765565",
                              pinnaclePassword: "4567erty!",
                              pinnacleApiUrl: "https://api.pinnaclesports.com/v1/",
                              pinnacleSportId: "29",

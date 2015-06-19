@@ -1,7 +1,7 @@
 package pnklsportparser
 
 class DefaultValue {
-    
+    String name
     String pinnacleLogin
     String pinnaclePassword
     String pinnacleApiUrl
@@ -11,6 +11,7 @@ class DefaultValue {
     Integer parserTerm //period in seconds for eyample 30*60 = 1800
     
     static constraints = {
+        name(nullable:false, blank: false)
         pinnacleLogin(nullable:false, blank: false)
         pinnaclePassword(nullable:false, blank: false)
         pinnacleApiUrl(nullable:false, blank: false)
@@ -22,6 +23,7 @@ class DefaultValue {
     
     static mapping = {
         version false
+        name column: 'name'
         pinnacleLogin column: 'pinnacleLogin'
         pinnacleLogin column: 'pinnaclePassword'
         pinnacleLogin column: 'pinnacleApiUrl'
@@ -30,4 +32,5 @@ class DefaultValue {
         pinnacleLogin column: 'parserTurn'
         pinnacleLogin column: 'parserTerm'
     }
+    
 }
