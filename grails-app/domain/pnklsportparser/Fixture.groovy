@@ -21,4 +21,17 @@ class Fixture {
         status(nullable:false, blank: false)
         starts(nullable:false, blank: false)
     }
+    
+    static mapping = {
+        id generator: 'assigned'
+        version false
+        eventId column: 'eventId', index: 'Eventid_Idx'
+        leagueId column: 'leagueId'
+        home column: 'home'
+        away column: 'away'
+        rotNum column: 'rotNum'
+        liveStatus column: 'liveStatus'
+        status column: 'status'
+        starts column: 'starts'
+    }
 }
