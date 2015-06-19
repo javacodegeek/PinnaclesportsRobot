@@ -23,7 +23,6 @@ class Fixture {
     }
     
     static mapping = {
-        id generator: 'assigned'
         version false
         eventId column: 'eventId', index: 'Eventid_Idx'
         leagueId column: 'leagueId'

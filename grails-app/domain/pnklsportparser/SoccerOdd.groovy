@@ -16,9 +16,8 @@ class SoccerOdd {
     }
     
     static mapping = {
-        id generator: 'assigned'
         version false
-        eventId column: 'eventId', index: 'Eventid_Idx'
+        eventId column: 'eventId', index: 'Eventid1_Idx'
         leagueId column: 'leagueId'
         period0 column: 'period0', sqlType: "text"
         period1 column: 'period1', sqlType: "text"
