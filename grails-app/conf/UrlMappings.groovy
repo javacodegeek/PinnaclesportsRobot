@@ -13,6 +13,6 @@ class UrlMappings {
         "/client/balance"(controller:"parser", action: "getBalance")
         "/sports"(controller:"parser", action: "getSports")
         "/leagues"(controller:"parser", action: "getLeagues")
-        "/dv"(view:"defaultvalue")
+        "/dv"(controller:"default", action: "getDefaultValue")
 	}
 }

@@ -19,11 +19,50 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-           <div style="width: 500px; margin-left: 50px; margin-top: 50px;"> 
-            <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">@</span>
-                     <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-            </div>
+           <div class="panel panel-primary" style="width: 500px; margin-left: 50px; margin-top: 50px;"> 
+               <div class="panel-heading">Options</div>
+               <div class="panel-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnacleLogin}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="pinnacleLogin">Login</span>
+                        </div><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnaclePassword}" aria-describedby="basic-addon2">
+                         <span class="input-group-addon" id="pinnaclePassword">Password</span>
+                    </div><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnacleApiUrl}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="pinnacleApiUrl">API URL</span>
+                    </div><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnacleSportId}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="pinnacleSportId">Sport id</span>
+                    </div><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnacleLeagueIds}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="pinnacleLeagueIds">Leagues ids</span>
+                    </div><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.parserTurn}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="parserTurn">Parser turn</span>
+                    </div><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.parserTerm}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="parserTerm">Parser term / sec</span>
+                    </div><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.stakeValue}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="stakeValue">Stake value</span>
+                    </div><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Login" value = "${data.minMaxStakeValue}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="minMaxStakeValue">Min max stake value</span>
+                    </div><br>
+                    <button type="button" class="btn btn-primary">Primary</button>
+               </div>
+
+
+                
            </div> 
 	</body>
 </html>
