@@ -8,6 +8,7 @@ class DefaultValue {
     String pinnacleSportId
     String pinnacleLeagueIds
     String parserTurn //on, off
+    
     Integer parserTerm //period in seconds for eyample 30*60 = 1800
     
     static constraints = {
