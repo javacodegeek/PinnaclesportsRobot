@@ -10,7 +10,9 @@ class BootStrap {
                              pinnacleSportId: "29",
                              pinnacleLeagueIds: "1872,2620",
                              parserTurn: "on",
-                             parserTerm: 300
+                             parserTerm: 300,
+                             stakeValue: 100,
+                             minMaxStakeValue: 1000
                             ).save(failOnError: true)
         }
     }

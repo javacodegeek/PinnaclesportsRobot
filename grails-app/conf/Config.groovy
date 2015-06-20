@@ -95,6 +95,12 @@ environments {
     }
 }
 
+bootstrap {
+    mincss = "twitterbootstrap/css/bootstrap.min.css"
+    minjs = "twitterbootstrap/js/bootstrap.min.js"
+    jqueryminjs = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+}
+
 // log4j configuration
 log4j.main = {
     // Example of changing the log pattern for the default console appender:

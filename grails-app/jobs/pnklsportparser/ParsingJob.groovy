@@ -9,8 +9,6 @@ class ParsingJob {
         simple startDelay: 60000, repeatInterval: 120000  
     }
     
-    
-    
     def execute() {
       println "Run ParsingJob!" 
       def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
