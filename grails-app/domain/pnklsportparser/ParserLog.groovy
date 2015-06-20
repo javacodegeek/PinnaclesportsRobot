@@ -1,7 +1,7 @@
 package pnklsportparser
 
 class ParserLog {
-    Date createdDate
+    Date createdDate = new Date()
     Integer fixtureNum
     Integer oddNum
     String sportId

@@ -31,8 +31,20 @@ class ParserService {
         
         if(typeRun == "auto"){
             DV.lastAutoRun = new Date()
+            new ParserLog(fixtureNum: Fixture.count(),
+                          oddNum: SoccerOdd.count(),
+                          sportId: DV.pinnacleSportId,
+                          leaguesIds: DV.pinnacleLeagueIds,
+                          status: "Success"
+                         ).save(failOnError: true)
         }else{
             DV.lastManualRun = new Date()
+            new ParserLog(fixtureNum: Fixture.count(),
+                          oddNum: SoccerOdd.count(),
+                          sportId: DV.pinnacleSportId,
+                          leaguesIds: DV.pinnacleLeagueIds,
+                          status: "Success"
+                         ).save(failOnError: true)
         }
         
     }
