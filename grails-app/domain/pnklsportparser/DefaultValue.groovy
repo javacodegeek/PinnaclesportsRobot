@@ -8,7 +8,7 @@ class DefaultValue {
     String pinnacleSportId
     String pinnacleLeagueIds
     String parserTurn
-    String parserTerm
+    Integer parserTerm
     Date   lastAutoRun 
     Date   lastManualRun
     

@@ -19,6 +19,10 @@ class ParsingJob {
             def diffTime = 0
             if (DV.lastAutoRun){
                 diffTime = unixTime - DV.lastAutoRun.getTime()
+                println "=========================="
+                println diffTime
+                println DV.parserTerm*1000
+                println "=========================="
                 if(diffTime >= DV.parserTerm*1000){
                     println "Start parsing proccess..."
                     parserService.runParsing("auto")
