@@ -22,14 +22,19 @@ class ParserService {
     static final URL_FIXTURES = "fixtures"
     
     
-    def runParsing(){
+    def runParsing(String typeRun){
         Fixture.executeUpdate('delete from Fixture')
         this.saveFixtures()
         SoccerOdd.executeUpdate('delete from SoccerOdd')
         this.saveSoccerOdds()
         def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
-        DV.lastAutoRun = new Date()
-        DV.lastManualRun = new Date()
+        
+        if(typeRun == "auto"){
+            DV.lastAutoRun = new Date()
+        }else{
+            DV.lastManualRun = new Date()
+        }
+        
     }
     
     def saveFixtures() {
