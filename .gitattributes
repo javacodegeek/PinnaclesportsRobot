@@ -4,7 +4,6 @@
 *.as text
 *.bat text
 *.cnf text
-*.conf text
 *.css text
 *.csv text
 *.dtd text
@@ -14,12 +13,9 @@
 *.gitignore text
 *.gitkeep text
 *.gitmodules text
-*.groovy text
-*.gsp text
 *.htaccess text
 *.htm text
 *.html text
-*.java text
 *.js text
 *.js.withjstl text
 *.json text
