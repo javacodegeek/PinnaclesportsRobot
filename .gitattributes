@@ -1,0 +1,4 @@
+* text=auto 
+# Have git change every .groovy and .java file to crlf
+*.java text eol=crlf
+*.groovy text eol=crlf
