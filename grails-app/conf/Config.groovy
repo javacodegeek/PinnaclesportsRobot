@@ -100,6 +100,9 @@ bootstrap {
     minjs = "twitterbootstrap/js/bootstrap.min.js"
     jqueryminjs = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
 }
+styles {
+    themecss = "css/theme.css"
+}
 
 // log4j configuration
 log4j.main = {

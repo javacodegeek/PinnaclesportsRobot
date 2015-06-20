@@ -10,15 +10,9 @@
 
 <html>
     <head>
+        <meta name="layout" content="main"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sample title</title>
+        <title>PinnaclesportsRobot</title>
     </head>
-    <body>
-        <a href="client/balance">CLIENT BALANCE</a></br>
-        <a href="sports">SPORTS</a></br>
-        <a href="leagues">LEAGUES</a></br>
-        <a href="odds">ODDS</a></br>
-        <a href="fixtures">FIXTURES</a></br>
-        <a href="dv">Default Value</a></br>
-    </body>
+    
 </html>
