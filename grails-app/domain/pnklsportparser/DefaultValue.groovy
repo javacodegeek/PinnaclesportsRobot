@@ -7,9 +7,11 @@ class DefaultValue {
     String pinnacleApiUrl
     String pinnacleSportId
     String pinnacleLeagueIds
-    String parserTurn //on, off
+    String parserTurn
+    String parserTerm
+    Date   lastAutoRun 
+    Date   lastManualRun
     
-    Integer parserTerm //period in seconds for eyample 30*60 = 1800
     
     static constraints = {
         name(nullable:false, blank: false)
@@ -20,18 +22,22 @@ class DefaultValue {
         pinnacleLeagueIds(nullable:false, blank: false)
         parserTurn(nullable:false, blank: false)
         parserTerm(nullable:false, blank: false)
+        lastAutoRun(nullable:true, blank: true)
+        lastManualRun(nullable:true, blank: true)
     }
     
     static mapping = {
         version false
         name column: 'name'
         pinnacleLogin column: 'pinnacleLogin'
-        pinnacleLogin column: 'pinnaclePassword'
-        pinnacleLogin column: 'pinnacleApiUrl'
-        pinnacleLogin column: 'pinnacleSportId'
-        pinnacleLogin column: 'pinnacleLeagueIds'
-        pinnacleLogin column: 'parserTurn'
-        pinnacleLogin column: 'parserTerm'
+        pinnaclePassword column: 'pinnaclePassword'
+        pinnacleApiUrl column: 'pinnacleApiUrl'
+        pinnacleSportId column: 'pinnacleSportId'
+        pinnacleLeagueIds column: 'pinnacleLeagueIds'
+        parserTurn column: 'parserTurn'
+        parserTerm column: 'parserTerm'
+        lastAutoRun column: 'lastAutoRun'
+        lastManualRun column: 'lastManualRun'
     }
     
 }

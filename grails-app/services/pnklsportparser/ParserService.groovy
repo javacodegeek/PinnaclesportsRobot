@@ -27,6 +27,9 @@ class ParserService {
         this.saveFixtures()
         SoccerOdd.executeUpdate('delete from SoccerOdd')
         this.saveSoccerOdds()
+        def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
+        DV.lastAutoRun = new Date()
+        DV.lastManualRun = new Date()
     }
     
     def saveFixtures() {
