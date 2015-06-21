@@ -55,8 +55,7 @@ class ParserController {
     
     def getParserLogs(){
         def parserLog = ParserLog.list([max: 20, sort: "createdDate", order: "desc", offset: 0])
-        def data
-        data.logs = parserLog
+        def data = parserLog
         render(view: "/parserlog", model: [data: data])
     }
     

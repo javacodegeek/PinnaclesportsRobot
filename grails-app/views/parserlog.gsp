@@ -10,9 +10,9 @@
 
 <html>
     <head>
-        <meta name="layout" content="defaultvalue"/>
+        <meta name="layout" content="parserlog"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Options</title>
+        <title>parser logs</title>
     </head>
 
 </html>
