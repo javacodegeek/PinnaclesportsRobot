@@ -19,10 +19,34 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-           <div class="panel panel-primary" style="width: 500px; margin-left: 50px; margin-top: 50px;"> 
+           <div class="panel panel-primary" style="width: 90%; margin-right: 50px;margin-left: 50px; margin-top: 50px;"> 
                <div class="panel-heading">Parser logs, only 20 last proccess</div>
                <div class="panel-body">
-                    
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>FixtureNums</th>
+                            <th>OddsNums</th>
+                            <th>Sport Id</th>
+                            <th>Leagues Ids</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                            <g:each var="log" in="${data}">
+                                <tr>
+                                     <td>${log.createdDate}</td>
+                                     <td>${log.fixtureNum}</td>
+                                     <td>${log.oddNum}</td>
+                                     <td>${log.sportId}</td>
+                                     <td>${log.leaguesIds}</td>
+                                     <td>${log.status}</td>
+                                </tr>
+                            </g:each>
+                        </tbody>
+                      </table>
                </div>
 
 
