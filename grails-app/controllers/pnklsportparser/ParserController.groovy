@@ -9,6 +9,8 @@ import static groovyx.net.http.ContentType.*
 import grails.util.Holders as cm
 import groovy.xml.XmlUtil
 import groovy.json.JsonBuilder
+import grails.converters.JSON
+
 
 import pnklsportparser.DefaultValue
 
@@ -50,4 +52,12 @@ class ParserController {
        def resp =  http.get(path: this.URL_LEAGUES, query: [sportid: DV.pinnacleSportId]) 
        render XmlUtil.serialize(resp)   
     }
+    
+    def getParserLogs(){
+        def parserLog = ParserLog.list([max: 20, sort: "createdDate", order: "desc", offset: 0])
+        def data
+        data.logs = parserLog
+        render(view: "/parserlog", model: [data: data])
+    }
+    
 }

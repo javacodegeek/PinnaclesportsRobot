@@ -14,5 +14,7 @@ class UrlMappings {
         "/sports"(controller:"parser", action: "getSports")
         "/leagues"(controller:"parser", action: "getLeagues")
         "/dv"(controller:"default", action: "getDefaultValue")
+        "/parserlogs"(controller:"parser", action: "getParserLogs")
+        
 	}
 }
