@@ -21,6 +21,7 @@ class ParserController {
     static final URL_LEAGUES = "leagues"
     static final URL_ODDS = "odds"
     static final URL_FIXTURES = "fixtures"
+    static final URL_LINE = "line"
     
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -57,6 +58,17 @@ class ParserController {
         def parserLog = ParserLog.list([max: 20, sort: "createdDate", order: "desc", offset: 0])
         def data = parserLog
         render(view: "/parserlog", model: [data: data])
+    }
+    
+    def getLine(params){
+       def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
+       def http = new HTTPBuilder(DV.pinnacleApiUrl)
+       http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
+      //def resp =  http.get(path: this.URL_LINE, query: [sportid: DV.pinnacleSportId, leagueId: params.leagueId, eventId: params.eventId, betType: params.betType, oddsFormat: "DECIMAL", periodNumber: params.periodNumber])
+       def resp =  http.get(path: this.URL_LINE, query: [sportId: "29", leagueId: "1872", eventId: "477221579", betType: "SPREAD", oddsFormat: "DECIMAL", periodNumber: "0", handicap: "-1"])
+     render(resp)
+        // sportId=29&leagueId=1728&eventId=308195882&betType=SPREAD&oddsFormat=DECIMAL&periodNumber=0&team=TEAM1&handicap=-1
+      /// render XmlUtil.serialize(resp)   
     }
     
 }
