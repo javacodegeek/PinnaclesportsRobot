@@ -64,9 +64,10 @@ class ParserController {
        def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
        def http = new HTTPBuilder(DV.pinnacleApiUrl)
        http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
-      //def resp =  http.get(path: this.URL_LINE, query: [sportid: DV.pinnacleSportId, leagueId: params.leagueId, eventId: params.eventId, betType: params.betType, oddsFormat: "DECIMAL", periodNumber: params.periodNumber])
-       def resp =  http.get(path: this.URL_LINE, query: [sportId: "29", leagueId: "1872", eventId: "477221579", betType: "SPREAD", oddsFormat: "DECIMAL", periodNumber: "0", handicap: "-1"])
-     render(resp)
+       http.headers.'content-type' = "application/json;charset=utf-8"
+        //def resp =  http.get(path: this.URL_LINE, query: [sportid: DV.pinnacleSportId, leagueId: params.leagueId, eventId: params.eventId, betType: params.betType, oddsFormat: "DECIMAL", periodNumber: params.periodNumber])
+       def resp =  http.get(path: this.URL_LINE, query: [sportId: "29"])
+        render(resp)
         // sportId=29&leagueId=1728&eventId=308195882&betType=SPREAD&oddsFormat=DECIMAL&periodNumber=0&team=TEAM1&handicap=-1
       /// render XmlUtil.serialize(resp)   
     }
