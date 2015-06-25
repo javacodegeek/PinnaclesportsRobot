@@ -16,6 +16,7 @@ class UrlMappings {
         "/dv"(controller:"default", action: "getDefaultValue")
         "/parserlogs"(controller:"parser", action: "getParserLogs")
         "/line"(controller:"parser", action: "getLine")
+        "/bets/place"(controller:"bot", action: "makeBet")
 
 	}
 }
