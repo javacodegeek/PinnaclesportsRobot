@@ -9,6 +9,8 @@ import static groovyx.net.http.ContentType.*
 import groovy.xml.XmlUtil
 import groovy.json.JsonBuilder
 import grails.converters.JSON
+import static groovyx.net.http.ContentType.*
+import static groovyx.net.http.Method.*
 
 
 class BotController {
@@ -49,17 +51,13 @@ class BotController {
                          oddsFormat:"DECIMAL"
                         ]
                                
-        
-       def http = new HTTPBuilder(DV.pinnacleApiUrl)
-       http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()      
-       def resp =  http.post(path: this.URL_PLACE_BET, query: attributes) 
-       def jsonresp = new JsonBuilder()
-       def jdata = jsonresp(resp)    
-       
-       
-        
-        render jdata
-        
-       //return true
-    }
+           def http = new HTTPBuilder(DV.pinnacleApiUrl)
+           http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()      
+           http.request (POST, ContentType.JSON) { req ->
+              uri.path = this.URL_PLACE_BET
+               body = (attributes as JSON).toString()
+               response.success = { resp, json -> println json}
+               response.failure = { resp, json -> println json}
+           }
+        }
 }
