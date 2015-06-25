@@ -38,26 +38,32 @@ class BotController {
        */
       
        def identifier = new Date().getTime().toString().encodeAsMD5() 
-       def attributes = [uniqueRequestId: identifier,
-                         acceptBetterLine: "TRUE",
-                         stake: 0.01,
-                         winRiskStake: "RISK",
-                         lineId: 208982220,
-                         sportId: 29,
-                         eventId: 477221579,
-                         periodNumber: 0,
-                         betType: "MONEYLINE",
-                         team:"DRAW",
-                         oddsFormat:"DECIMAL"
-                        ]
-                               
-           def http = new HTTPBuilder(DV.pinnacleApiUrl)
-           http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()      
+
+       def attributes = [:]
+       attributes.uniqueRequestId = identifier
+       attributes.acceptBetterLine = "TRUE"
+       attributes.stake = DV.stakeValue
+       attributes.winRiskStake = "RISK"
+       attributes.lineId = params.lineId
+       attributes.sportId = DV.pinnacleSportId
+       attributes.eventId = params.eventId
+       attributes.periodNumber = periodNumber
+       attributes.betType = params.betType
+       if (params.betType == "SPREAD" || params.betType == "MONEYLINE" || params.betType == "TEAM_TOTAL_POINTS"){
+                  attributes.team = params.team
+       }
+       if (params.betType == "TOTAL_POINTS" || params.betType == "TEAM_TOTAL_POINTS"){
+                  attributes.side = params.side
+       }
+       attributes.oddsFormat = "DECIMAL"
+        
+       def http = new HTTPBuilder(DV.pinnacleApiUrl)
+       http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()      
            http.request (POST, ContentType.JSON) { req ->
               uri.path = this.URL_PLACE_BET
                body = (attributes as JSON).toString()
-               response.success = { resp, json -> println json}
-               response.failure = { resp, json -> println json}
-           }
-        }
+               response.success = { resp, json -> return json}
+               response.failure = { resp, json -> return json}
+       }
+    }
 }
