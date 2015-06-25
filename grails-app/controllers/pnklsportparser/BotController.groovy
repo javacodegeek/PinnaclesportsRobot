@@ -20,23 +20,7 @@ class BotController {
     
     def makeBet() {
        def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
-       /*def http = new HTTPBuilder(DV.pinnacleApiUrl)
-       http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
-       def resp =  http.get(path: this.URL_ODDS, query: [sportid: DV.pinnacleSportId, leagueIds: DV.pinnacleLeagueIds]) 
-       def jsonresp = new JsonBuilder()
-       def jdata = jsonresp(resp)    
-       jdata.leagues.each{ league ->
-            league.events.each{ event ->
-                new SoccerOdd(eventId: event.id,
-                              leagueId: league.id,
-                              period0: (event.periods[0] as JSON).toString(),
-                              period1: (event.periods[1] as JSON).toString(),
-                              period2: (event.periods[2] as JSON).toString()
-                ).save()
-            }
-       }
-       */
-      
+       
        def identifier = new Date().getTime().toString().encodeAsMD5() 
 
        def attributes = [:]

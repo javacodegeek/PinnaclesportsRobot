@@ -10,7 +10,8 @@ import grails.util.Holders as cm
 import groovy.xml.XmlUtil
 import groovy.json.JsonBuilder
 import grails.converters.JSON
-
+import static groovyx.net.http.ContentType.*
+import static groovyx.net.http.Method.*
 
 import pnklsportparser.DefaultValue
 
@@ -60,7 +61,7 @@ class ParserController {
         render(view: "/parserlog", model: [data: data])
     }
     
-    def getLine(params){
+    /*def getLine(params){
        def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
        def http = new HTTPBuilder(DV.pinnacleApiUrl)
        http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
@@ -70,6 +71,22 @@ class ParserController {
         render(resp)
         // sportId=29&leagueId=1728&eventId=308195882&betType=SPREAD&oddsFormat=DECIMAL&periodNumber=0&team=TEAM1&handicap=-1
       /// render XmlUtil.serialize(resp)   
-    }
+    }*/
     
+    def getLine() {
+       def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
+       
+       def identifier = new Date().getTime().toString().encodeAsMD5() 
+
+       def attributes = [:]
+       attributes.sportId = DV.pinnacleSportId
+        
+       def http = new HTTPBuilder(DV.pinnacleApiUrl)
+       http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()      
+      
+       http.get(path:this.URL_LINE, contentType: ContentType.JSON, query: attributes) { resp, reader ->
+           println  reader.text
+           println resp.statusLine
+       }
+    }
 }
