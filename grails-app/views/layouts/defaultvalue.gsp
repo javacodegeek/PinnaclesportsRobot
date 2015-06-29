@@ -24,40 +24,40 @@
                <div class="panel-heading">Options</div>
                <div class="panel-body">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnacleLogin}" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="pinnacleLogin">Login</span>
+                        <input type="text" class="form-control" id="pinnacleLogin" placeholder="Login" value = "${data.pinnacleLogin}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" >Login</span>
                         </div><br>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnaclePassword}" aria-describedby="basic-addon2">
-                         <span class="input-group-addon" id="pinnaclePassword">Password</span>
+                        <input type="text" class="form-control" id="pinnaclePassword" placeholder="Login" value = "${data.pinnaclePassword}" aria-describedby="basic-addon2">
+                         <span class="input-group-addon" >Password</span>
                     </div><br>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnacleApiUrl}" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="pinnacleApiUrl">API URL</span>
+                        <input type="text" class="form-control"  id="pinnacleApiUrl" placeholder="Login" value = "${data.pinnacleApiUrl}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" >API URL</span>
                     </div><br>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnacleSportId}" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="pinnacleSportId">Sport id</span>
+                        <input type="text" class="form-control" id="pinnacleSportId" placeholder="Login" value = "${data.pinnacleSportId}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" >Sport id</span>
                     </div><br>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.pinnacleLeagueIds}" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="pinnacleLeagueIds">Leagues ids</span>
+                        <input type="text" class="form-control" id="pinnacleLeagueIds" placeholder="Login" value = "${data.pinnacleLeagueIds}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" >Leagues ids</span>
                     </div><br>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.parserTurn}" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="parserTurn">Parser turn</span>
+                        <input type="text" class="form-control" id="parserTurn" placeholder="Login" value = "${data.parserTurn}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" >Parser turn</span>
                     </div><br>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.parserTerm}" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="parserTerm">Parser term / sec</span>
+                        <input type="text" class="form-control"  id="parserTerm" placeholder="Login" value = "${data.parserTerm}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" >Parser term / sec</span>
                     </div><br>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.stakeValue}" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="stakeValue">Stake value</span>
+                        <input type="text" class="form-control" id="stakeValue" placeholder="Login" value = "${data.stakeValue}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" >Stake value</span>
                     </div><br>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Login" value = "${data.minMaxStakeValue}" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="minMaxStakeValue">Min max stake value</span>
+                        <input type="text" class="form-control"  id="minMaxStakeValue" placeholder="Login" value = "${data.minMaxStakeValue}" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" >Min max stake value</span>
                     </div><br>
                     <button type="button" class="btn btn-primary"  id="btnSaveDV">Save</button>
                </div>
