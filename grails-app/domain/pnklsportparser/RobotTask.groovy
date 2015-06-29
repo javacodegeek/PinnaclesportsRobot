@@ -2,12 +2,13 @@ package pnklsportparser
 
 class RobotTask {
 
-    Date     dateCreate
-    Date     dateModify
+    Date     dateCreate = new Date() 
+    Date     dateModify = new Date()
     String   status
     Integer  evgentId
     Integer  lineId
     Integer  stakeValue
+    Integer  resultStakeValue
     Integer  periodNumber   
     String   betType
     String   team
@@ -26,6 +27,7 @@ class RobotTask {
         evgentId(nullable:true, blank: true)
         lineId(nullable:true, blank: true)
         stakeValue(nullable:true, blank: true)
+        resultStakeValue(nullable:true, blank: true)
         periodNumber  (nullable:true, blank: true) 
         betType(nullable:true, blank: true)
         team(nullable:true, blank: true)
@@ -42,6 +44,7 @@ class RobotTask {
         evgentId column: 'evgentId'
         lineId column: 'lineId'
         stakeValue column: 'stakeValue'
+        resultStakeValue column: 'resultStakeValue'
         periodNumber column: 'periodNumber'
         betType column: 'betType'
         team column: 'team'

@@ -50,4 +50,19 @@ class BotController {
                response.failure = { resp, json -> return json}
        }
     }
+    
+   def newRobotTask() {
+       new RobotTask(status: params.status,
+                     evgentId: params.evgentId,
+                     lineId: params.lineId,
+                     stakeValue: params.stakeValue,
+                     periodNumber: params.periodNumber,
+                     betType: params.betType,
+                     team: params.betType,
+                     side: params.side,
+                     home: params.home,
+                     away: params.away,
+                     resultStakeValue: params.resultStakeValue
+                    ).save()
+        
 }
