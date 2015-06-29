@@ -1,6 +1,6 @@
 package pnklsportparser
 
-class DefaultValue {
+class RobotTask {
 
     Date     dateCreate
     Date     dateModify
@@ -14,36 +14,40 @@ class DefaultValue {
     String   side
     String   home
     String   away
+        
+    /*
+     * Status = WAIT_LIVE | SUCCESS | DECLINE
+     * */
     
     static constraints = {
-        name(nullable:false, blank: false)
-        pinnacleLogin(nullable:false, blank: false)
-        pinnaclePassword(nullable:false, blank: false)
-        pinnacleApiUrl(nullable:false, blank: false)
-        pinnacleSportId(nullable:false, blank: false)
-        pinnacleLeagueIds(nullable:false, blank: false)
-        parserTurn(nullable:false, blank: false)
-        stakeValue(nullable:false, blank: false)
-        minMaxStakeValue(nullable:false, blank: false)
-        parserTerm(nullable:false, blank: false)
-        lastAutoRun(nullable:true, blank: true)
-        lastManualRun(nullable:true, blank: true)
+        dateCreate(nullable:true, blank: true)
+        dateModify(nullable:true, blank: true)
+        status(nullable:true, blank: true)
+        evgentId(nullable:true, blank: true)
+        lineId(nullable:true, blank: true)
+        stakeValue(nullable:true, blank: true)
+        periodNumber  (nullable:true, blank: true) 
+        betType(nullable:true, blank: true)
+        team(nullable:true, blank: true)
+        side(nullable:true, blank: true)
+        home(nullable:true, blank: true)
+        away(nullable:true, blank: true)
     }
     
     static mapping = {
         version false
-        name column: 'name'
-        pinnacleLogin column: 'pinnacleLogin'
-        pinnaclePassword column: 'pinnaclePassword'
-        pinnacleApiUrl column: 'pinnacleApiUrl'
-        pinnacleSportId column: 'pinnacleSportId'
-        pinnacleLeagueIds column: 'pinnacleLeagueIds'
-        parserTurn column: 'parserTurn'
-        parserTerm column: 'parserTerm'
+        dateCreate column: 'dateCreate'
+        dateModify column: 'dateModify'
+        status column: 'status'
+        evgentId column: 'evgentId'
+        lineId column: 'lineId'
         stakeValue column: 'stakeValue'
-        minMaxStakeValue column: 'minMaxStakeValue'
-        lastAutoRun column: 'lastAutoRun'
-        lastManualRun column: 'lastManualRun'
+        periodNumber column: 'periodNumber'
+        betType column: 'betType'
+        team column: 'team'
+        side column: 'side'
+        home column: 'home'
+        away column: 'away'
     }
     
 }
