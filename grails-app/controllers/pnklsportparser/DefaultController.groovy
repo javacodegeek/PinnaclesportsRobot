@@ -10,4 +10,9 @@ class DefaultController {
         println data.dump()
         render(view: "/defaultvalue", model: [data: data])
     }
+    
+    def setDefaultValue(){
+        println params
+        render "Success!"
+    }
 }

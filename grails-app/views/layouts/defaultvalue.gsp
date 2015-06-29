@@ -16,6 +16,7 @@
                 <link rel="stylesheet" type="text/css" href="${cm.config.bootstrap.mincss}" media="screen" />
                 <script src="${cm.config.bootstrap.minjs}"></script>
                 <script src="${cm.config.bootstrap.jqueryminjs}"></script>
+                <script src="${cm.config.corejs.savedv}"></script>
 		<g:layoutHead/>
 	</head>
 	<body>
@@ -58,7 +59,7 @@
                         <input type="text" class="form-control" placeholder="Login" value = "${data.minMaxStakeValue}" aria-describedby="basic-addon2">
                         <span class="input-group-addon" id="minMaxStakeValue">Min max stake value</span>
                     </div><br>
-                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-primary"  id="btnSaveDV">Save</button>
                </div>
 
 
