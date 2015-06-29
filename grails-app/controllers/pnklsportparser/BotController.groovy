@@ -15,7 +15,9 @@ import static groovyx.net.http.Method.*
 
 class BotController {
     static final URL_PLACE_BET = "bets/place"
-
+    static final URL_GET_BETS = "bets"
+    
+    
     def index() { }
     
     def makeBet() {
@@ -64,5 +66,15 @@ class BotController {
                      away: params.away,
                      resultStakeValue: params.resultStakeValue
                     ).save()
-        
+   }
+   
+   def getBets() {
+      def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
+      def http = new HTTPBuilder(DV.pinnacleApiUrl)
+      http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
+      def resp =  http.get(path: this.URL_GET_BETS) 
+      def jsonresp = new JsonBuilder()
+      jsonresp(resp)
+      render jsonresp
+   }  
 }

@@ -17,6 +17,6 @@ class UrlMappings {
         "/parserlogs"(controller:"parser", action: "getParserLogs")
         "/line"(controller:"parser", action: "getLine")
         "/bets/place"(controller:"bot", action: "makeBet")
-
+        "/bets"(controller:"bot", action: "getBets")
 	}
 }
