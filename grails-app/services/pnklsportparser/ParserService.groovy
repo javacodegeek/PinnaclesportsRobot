@@ -76,7 +76,7 @@ class ParserService {
        def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
        def http = new HTTPBuilder(DV.pinnacleApiUrl)
        http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
-       def resp =  http.get(path: this.URL_ODDS, query: [sportid: DV.pinnacleSportId, leagueIds: DV.pinnacleLeagueIds]) 
+       def resp =  http.get(path: this.URL_ODDS, query: [sportid: DV.pinnacleSportId, leagueids: DV.pinnacleLeagueIds]) 
        def jsonresp = new JsonBuilder()
        def jdata = jsonresp(resp)    
        jdata.leagues.each{ league ->

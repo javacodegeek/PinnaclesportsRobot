@@ -7,6 +7,7 @@ class RobotTask {
     String   status
     Integer  evgentId
     Integer  lineId
+    Integer  altLineId
     Integer  stakeValue
     Integer  resultStakeValue
     Integer  periodNumber   
@@ -26,6 +27,7 @@ class RobotTask {
         status(nullable:true, blank: true)
         evgentId(nullable:true, blank: true)
         lineId(nullable:true, blank: true)
+        altLineId(nullable:true, blank: true)
         stakeValue(nullable:true, blank: true)
         resultStakeValue(nullable:true, blank: true)
         periodNumber  (nullable:true, blank: true) 
@@ -43,6 +45,7 @@ class RobotTask {
         status column: 'status'
         evgentId column: 'evgentId'
         lineId column: 'lineId'
+        altLineId column: 'altLineId'
         stakeValue column: 'stakeValue'
         resultStakeValue column: 'resultStakeValue'
         periodNumber column: 'periodNumber'
