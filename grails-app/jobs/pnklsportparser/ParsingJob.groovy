@@ -6,7 +6,7 @@ class ParsingJob {
     ParserService parserService
 
     static triggers = {
-        simple startDelay: 60000, repeatInterval: 120000  
+        simple startDelay: 5000, repeatInterval: 120000  
     }
     
     def execute() {

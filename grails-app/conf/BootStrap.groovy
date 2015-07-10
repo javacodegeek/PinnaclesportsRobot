@@ -19,8 +19,8 @@ class BootStrap {
         if(!RobotTask.count()){
             new RobotTask(   status: null,
                              errorCode: null,
-                             eventId: 480523487,
-                             lineId: 210706072,
+                             eventId: 480523373,
+                             lineId: 210722608,
                              altLineId: null,
                              periodNumber: 0,
                              betType: "MONEYLINE",

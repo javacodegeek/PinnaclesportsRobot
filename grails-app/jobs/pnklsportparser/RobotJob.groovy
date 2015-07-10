@@ -16,7 +16,7 @@ class RobotJob {
     ParserService parserService
 
     static triggers = {
-        simple startDelay: 5000, repeatInterval: 120000  
+        simple startDelay: 30000, repeatInterval: 120000  
     }
     
     def execute() {
@@ -62,7 +62,39 @@ class RobotJob {
                                                                e.stakeValue = DV.stakeValue
                                                                e.save()
                     }
-                            
+                    
+                    
+                    def evnt = SoccerOdd.findByEventId(ev.eventId)
+                    def p_data = null
+                    switch (ev.periodNumber){
+                        case 0:
+                               p_data = evnt.period0
+                               break
+                        case 1:
+                               p_data = evnt.period1
+                               break
+                        case 2:
+                               p_data = evnt.period2
+                               break       
+                    }
+                    p_data = JSON.parse(p_data)
+                    switch (ev.betType) {
+                        case "MONEYLINE":
+                               println p_data.moneyline
+                               
+                               break
+                        case "SPREAD":
+                               p_data.spreads
+                               break
+                        case "TOTAL_POINTS":
+                               p_data.totals
+                               break
+                        case "TEAM_TOTAL_POINTS":
+                               p_data.teamTotals
+                               break
+                    }
+                    
+                  
                             
                     }
                 
