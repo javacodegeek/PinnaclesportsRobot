@@ -12,7 +12,7 @@ class BootStrap {
                              pinnacleLeagueIds: "1835,6310",
                              parserTurn: "on",
                              parserTerm: 100,
-                             stakeValue: 100,
+                             stakeValue: 300,
                              minMaxStakeValue: 1000
                             ).save(failOnError: true)
         }
@@ -22,7 +22,6 @@ class BootStrap {
                              eventId: 480523487,
                              lineId: 210706072,
                              altLineId: null,
-                             stakeValue: 100,
                              periodNumber: 0,
                              betType: "MONEYLINE",
                              team: "Team1",

@@ -59,6 +59,7 @@ class RobotJob {
                                                                e.status = json.status
                                                                e.errorCode = json.errorCode
                                                                e.betId = json.betId
+                                                               e.stakeValue = DV.stakeValue
                                                                e.save()
                     }
                             

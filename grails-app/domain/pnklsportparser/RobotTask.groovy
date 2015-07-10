@@ -40,7 +40,7 @@ class RobotTask {
         errorCode column: 'errorCode'
         eventId column: 'evgentId'
         lineId column: 'lineId'
-        betId column: 'lineId'
+        betId column: 'betId'
         altLineId column: 'altLineId'
         stakeValue column: 'stakeValue'
         periodNumber column: 'periodNumber'
