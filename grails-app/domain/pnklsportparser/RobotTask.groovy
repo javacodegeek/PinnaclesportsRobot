@@ -5,37 +5,31 @@ class RobotTask {
     Date     dateCreate = new Date() 
     Date     dateModify = new Date()
     String   status
-    Integer  evgentId
+    String   errorCode
+    Integer  eventId
     Integer  lineId
+    Integer  betId
     Integer  altLineId
     Integer  stakeValue
-    Integer  resultStakeValue
     Integer  periodNumber   
     String   betType
     String   team
     String   side
-    String   home
-    String   away
-        
-    /*
-     * Status = WAIT_LIVE | SUCCESS | DECLINE
-     * */
-    
+
     static constraints = {
         dateCreate(nullable:true, blank: true)
         dateModify(nullable:true, blank: true)
         status(nullable:true, blank: true)
-        evgentId(nullable:true, blank: true)
+        errorCode(nullable:true, blank: true)
+        eventId(nullable:true, blank: true)
         lineId(nullable:true, blank: true)
+        betId(nullable:true, blank: true)
         altLineId(nullable:true, blank: true)
         stakeValue(nullable:true, blank: true)
-        resultStakeValue(nullable:true, blank: true)
         periodNumber  (nullable:true, blank: true) 
         betType(nullable:true, blank: true)
         team(nullable:true, blank: true)
         side(nullable:true, blank: true)
-        home(nullable:true, blank: true)
-        away(nullable:true, blank: true)
     }
     
     static mapping = {
@@ -43,17 +37,16 @@ class RobotTask {
         dateCreate column: 'dateCreate'
         dateModify column: 'dateModify'
         status column: 'status'
-        evgentId column: 'evgentId'
+        errorCode column: 'errorCode'
+        eventId column: 'evgentId'
         lineId column: 'lineId'
+        betId column: 'lineId'
         altLineId column: 'altLineId'
         stakeValue column: 'stakeValue'
-        resultStakeValue column: 'resultStakeValue'
         periodNumber column: 'periodNumber'
         betType column: 'betType'
         team column: 'team'
         side column: 'side'
-        home column: 'home'
-        away column: 'away'
     }
     
 }

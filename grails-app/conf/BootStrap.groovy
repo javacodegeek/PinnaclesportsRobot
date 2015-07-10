@@ -17,19 +17,17 @@ class BootStrap {
                             ).save(failOnError: true)
         }
         if(!RobotTask.count()){
-            new RobotTask(status: "FREE",
-                             evgentId: 480523373,
-                             lineId: 210722596,
+            new RobotTask(   status: null,
+                             errorCode: null,
+                             eventId: 480523487,
+                             lineId: 210706072,
                              altLineId: null,
                              stakeValue: 100,
-                             resultStakeValue: 100,
                              periodNumber: 0,
-                             betType: "SPREAD",
+                             betType: "MONEYLINE",
                              team: "Team1",
-                             side: null,
-                             home: null,
-                             away: null
-                            ).save(failOnError: true)
+                             side: null
+                         ).save(failOnError: true)
         }
         
     }
