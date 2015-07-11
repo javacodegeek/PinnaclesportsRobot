@@ -21,11 +21,11 @@ class BootStrap {
                              errorCode: null,
                              eventId: 480523373,
                              lineId: 210722608,
-                             altLineId: null,
+                             altLineId: null,                           
                              periodNumber: 0,
-                             betType: "MONEYLINE",
+                             betType: "TEAM_TOTAL_POINTS",
                              team: "Team1",
-                             side: null
+                             side: "under"
                          ).save(failOnError: true)
         }
         

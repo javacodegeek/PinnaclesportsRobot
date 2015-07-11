@@ -36,6 +36,7 @@ class RobotJob {
                     attributes.stake = DV.stakeValue
                     attributes.winRiskStake = "RISK"
                     attributes.lineId = ev.lineId
+                    if(ev.altLineId) {attributes.altLineId = ev.altLineId}
                     attributes.sportId = DV.pinnacleSportId
                     attributes.eventId = ev.eventId
                     attributes.periodNumber = ev.periodNumber
@@ -66,6 +67,7 @@ class RobotJob {
                     
                     def evnt = SoccerOdd.findByEventId(ev.eventId)
                     def p_data = null
+                    def koff = null
                     switch (ev.periodNumber){
                         case 0:
                                p_data = evnt.period0
@@ -80,21 +82,104 @@ class RobotJob {
                     p_data = JSON.parse(p_data)
                     switch (ev.betType) {
                         case "MONEYLINE":
-                               println p_data.moneyline
-                               
+                               if(p_data.moneyline){
+                                 
+                                 switch(ev.team){
+                                    case "Team1":
+                                          koff = p_data.moneyline.home
+                                          break
+                                    case "Team2":
+                                          koff = p_data.moneyline.away
+                                          break
+                                    case "Draw":
+                                          koff = p_data.moneyline.draw
+                                          break       
+                                 }       
+                               }
                                break
                         case "SPREAD":
-                               p_data.spreads
+                               p_data.spreads.each{p ->
+                                   if(!ev.altLineId && !p.altLineId){
+                                       switch(ev.team){
+                                        case "Team1":
+                                          koff = p.home
+                                          break
+                                        case "Team2":
+                                          koff = p.away
+                                          break 
+                                        }
+                                   }
+                                   if(ev.altLineId == p.altLineId){
+                                       switch(ev.team){
+                                        case "Team1":
+                                          koff = p.home
+                                          break
+                                        case "Team2":
+                                          koff = p.away
+                                          break 
+                                        }
+                                   }
+                               }
                                break
                         case "TOTAL_POINTS":
-                               p_data.totals
+                               p_data.totals.each{p ->
+                                   if(!ev.altLineId && !p.altLineId){
+                                       switch(ev.side){
+                                        case "under":
+                                          koff = p.under
+                                          break
+                                        case "over":
+                                          koff = p.over
+                                          break 
+                                        }
+                                   }
+                                   if(ev.altLineId == p.altLineId){
+                                       switch(ev.side){
+                                        case "under":
+                                          koff = p.under
+                                          break
+                                        case "over":
+                                          koff = p.over
+                                          break 
+                                        }
+                                   }
+                               }
                                break
                         case "TEAM_TOTAL_POINTS":
-                               p_data.teamTotals
+                               if(p_data.teamTotal){
+                                 switch(ev.team){
+                                    case "Team1":
+                                          switch(ev.side){
+                                            case "under":
+                                             koff = p_data.teamTotal.home.under
+                                             break
+                                            case "over":
+                                             koff = p_data.teamTotal.home.over
+                                            break 
+                                            }
+                                          break
+                                    case "Team2":
+                                          switch(ev.side){
+                                            case "under":
+                                             koff = p_data.teamTotal.away.under
+                                             break
+                                            case "over":
+                                             koff = p_data.teamTotal.away.over
+                                            break 
+                                            }
+                                          break
+                                          
+                                 }       
+                               }
+                               
                                break
                     }
-                    
-                  
+                    println koff
+                            float dk = null
+                            if (koff > 0){
+                                dk = koff/100
+                            }
+                    println dk                
                             
                     }
                 
