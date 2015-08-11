@@ -9,7 +9,7 @@ class BootStrap {
                              pinnaclePassword: "4567erty!",
                              pinnacleApiUrl: "https://api.pinnaclesports.com/v1/",
                              pinnacleSportId: "29",
-                             pinnacleLeagueIds: "1835,6310",
+                             pinnacleLeagueIds: "1980",
                              parserTurn: "on",
                              parserTerm: 100,
                              stakeValue: 300,
@@ -19,11 +19,11 @@ class BootStrap {
         if(!RobotTask.count()){
             new RobotTask(   status: null,
                              errorCode: null,
-                             eventId: 480523373,
-                             lineId: 210722608,
+                             eventId: '488029618',
+                             lineId: '216552524',
                              altLineId: null,                           
                              periodNumber: 0,
-                             betType: "TEAM_TOTAL_POINTS",
+                             betType: "MONEYLINE",
                              team: "Team1",
                              side: "under"
                          ).save(failOnError: true)

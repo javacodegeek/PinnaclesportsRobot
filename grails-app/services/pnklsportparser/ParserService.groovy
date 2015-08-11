@@ -9,7 +9,7 @@ import groovyx.net.http.Method
 import groovyx.net.http.RESTClient
 import static groovyx.net.http.ContentType.*
 import groovy.xml.XmlUtil
-import groovy.json.JsonBuilder
+import groovy.json.*
 import grails.converters.JSON
 
 @Transactional
@@ -53,9 +53,8 @@ class ParserService {
        def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
        def http = new HTTPBuilder(DV.pinnacleApiUrl)
        http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()      
-       def resp =  http.get(path: this.URL_FIXTURES, query: [sportid: DV.pinnacleSportId, leagueIds: DV.pinnacleLeagueIds]) 
-       def jsonresp = new JsonBuilder()
-       def jdata = jsonresp(resp)    
+       def resp =  http.get(path: this.URL_FIXTURES, query: [sportid: DV.pinnacleSportId, leagueIds: DV.pinnacleLeagueIds], contentType: TEXT) 
+       def jdata = new JsonSlurper().parseText(resp.str)
        jdata.league.each{ league ->
             league.events.each{ event ->
                 new Fixture(eventId: event.id,
@@ -76,9 +75,8 @@ class ParserService {
        def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
        def http = new HTTPBuilder(DV.pinnacleApiUrl)
        http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
-       def resp =  http.get(path: this.URL_ODDS, query: [sportid: DV.pinnacleSportId, leagueids: DV.pinnacleLeagueIds]) 
-       def jsonresp = new JsonBuilder()
-       def jdata = jsonresp(resp)    
+       def resp =  http.get(path: this.URL_ODDS, query: [sportid: DV.pinnacleSportId, leagueids: DV.pinnacleLeagueIds], contentType: TEXT) 
+       def jdata = new JsonSlurper().parseText(resp.str)
        jdata.leagues.each{ league ->
             league.events.each{ event ->
                 new SoccerOdd(eventId: event.id,

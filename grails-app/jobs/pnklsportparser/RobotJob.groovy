@@ -6,7 +6,7 @@ import groovyx.net.http.Method
 import groovyx.net.http.RESTClient
 import static groovyx.net.http.ContentType.*
 import groovy.xml.XmlUtil
-import groovy.json.JsonBuilder
+import groovy.json.*
 import grails.converters.JSON
 import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
@@ -16,7 +16,7 @@ class RobotJob {
     ParserService parserService
 
     static triggers = {
-        simple startDelay: 30000, repeatInterval: 120000  
+        simple startDelay: 35000, repeatInterval: 1200000  
     }
     
     def execute() {
@@ -51,18 +51,19 @@ class RobotJob {
 
                     def http = new HTTPBuilder(DV.pinnacleApiUrl)
                     def result = null
-                    http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()      
-                        http.request (POST, ContentType.JSON) { req ->
-                           uri.path = "bets/place"
-                            body = (attributes as JSON).toString()
-                            response.success = { resp, json -> println json
-                                                               def e = RobotTask.get(ev.id)
-                                                               e.status = json.status
-                                                               e.errorCode = json.errorCode
-                                                               e.betId = json.betId
-                                                               e.stakeValue = DV.stakeValue
-                                                               e.save()
-                    }
+                    
+                     def js = (attributes as JSON).toString()
+                    def process = [ 'bash', '-c', "curl --user LZ765565:4567erty! -i --header 'Content-Type: application/json' -H 'Accept: text/json' --request 'POST' --data '$js' https://api.pinnaclesports.com/v1/bets/place" ].execute().text
+                    def jsontext = process.substring(process.indexOf('{'))
+                    def jsonr = new JsonSlurper().parseText(jsontext)                 
+                         println jsonr
+                         def e = RobotTask.get(ev.id)
+                         e.status = jsonr.status
+                         e.errorCode = jsonr.errorCode
+                         e.betId = jsonr.betId
+                         e.stakeValue = DV.stakeValue
+                         e.save()
+                            
                     
                     
                     def evnt = SoccerOdd.findByEventId(ev.eventId)
@@ -175,13 +176,13 @@ class RobotJob {
                                break
                     }
                     println koff
-                            float dk = null
+                            def dk = null
                             if (koff > 0){
                                 dk = koff/100
                             }
                     println dk                
                             
-                    }
+                    
                 
                 
              }

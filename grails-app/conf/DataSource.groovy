@@ -16,9 +16,9 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://127.0.0.1:3306/db_pnklsport"
+            url = "jdbc:mysql://localhost:3306/db_pnklsport"
             username = "root"
             password = ""
         }
