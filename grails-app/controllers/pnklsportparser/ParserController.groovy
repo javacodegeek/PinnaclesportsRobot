@@ -30,38 +30,28 @@ class ParserController {
     }
     
     def getTest(){
-      def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
-      def http = new RESTClient(DV.pinnacleApiUrl)
-                    def result = null
-                    http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()      
-           
-         println "${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
-                    def identifier = new Date().getTime().toString().encodeAsMD5() 
+      def http1 = new HTTPBuilder("http://176.8.202.92/")
+      def resp1 =  http1.get(path: "testbot.php", contentType: TEXT)  
+      def rr = resp1.str.value.toString().replaceAll(" ", "").replaceAll("\n|\r\n", "").trim()
+       if(rr.length()<10){
+           def json = []
+       } else {
+             def json = new JsonSlurper().parseText(rr.substring(1))
 
-                    def attributes = [:]
-                        attributes.uniqueRequestId = identifier
-                        attributes.acceptBetterLine = 'TRUE'
-                        attributes.stake = 3
-                        attributes.winRiskStake = 'RISK'
-                        attributes.lineId = '216437742'
-                        attributes.sportId = '29'
-                        attributes.eventId = '488029618'
-                    attributes.periodNumber = '0'
-                    attributes.betType = 'MONEYLINE'
-                    attributes.team = 'Team1'
-                    
-                   
-                    attributes.oddsFormat = 'DECIMAL'
-        
-                 
-        
-      def js = (attributes as JSON).toString()
-      println js
-      def process = [ 'bash', '-c', "curl --user LZ765565:4567erty! -i --header 'Content-Type: application/json' -H 'Accept: text/json' --request 'POST' --data '$js' https://api.pinnaclesports.com/v1/bets/place" ].execute().text
-      def jsontext = process.substring(process.indexOf('{'))
-      def json = new JsonSlurper().parseText(jsontext)  
-      println json
-                     
+           json.each{j ->
+            new RobotTask(   status: null,
+                             errorCode: null,
+                             eventId: j.eventId,
+                             lineId: j.lineId,
+                             altLineId: j.altLineId,                           
+                             periodNumber: 0,
+                             betType: j.betType,
+                             team: j.team,
+                             side: j.side
+                         ).save(flush: true)
+          }   
+         } 
+         render json
     }
     
     def getBalance(){
@@ -87,6 +77,7 @@ class ParserController {
        def http = new HTTPBuilder(DV.pinnacleApiUrl)
        http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassword}".bytes.encodeBase64()
        def resp =  http.get(path: this.URL_LEAGUES, query: [sportid: DV.pinnacleSportId])     
+       render(text: XmlUtil.serialize(resp), contentType: "text/xml", encoding: "UTF-8")
     }
     
     def getParserLogs(){

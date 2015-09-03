@@ -6,7 +6,7 @@ class ParsingJob {
     ParserService parserService
 
     static triggers = {
-        simple startDelay: 5000, repeatInterval: 1200000  
+        simple startDelay: 5000, repeatInterval: 30000
     }
     
     def execute() {
@@ -20,6 +20,9 @@ class ParsingJob {
                 if(diffTime >= DV.parserTerm*1000){
                     println "Start parsing proccess..."
                     parserService.runParsing("auto")
+                    
+               
+                    
                     println "Stop parsing proccess." 
                 }
             } else {

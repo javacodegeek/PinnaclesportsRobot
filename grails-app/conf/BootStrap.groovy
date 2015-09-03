@@ -5,27 +5,27 @@ class BootStrap {
     def init = { servletContext ->
         if(!DefaultValue.count()){
             new DefaultValue(name: "PINNACLESPORTSROBOT",
-                             pinnacleLogin: "LZ765565",
-                             pinnaclePassword: "4567erty!",
+                             pinnacleLogin: "IC748133",
+                             pinnaclePassword: "rty123456!",
                              pinnacleApiUrl: "https://api.pinnaclesports.com/v1/",
                              pinnacleSportId: "29",
-                             pinnacleLeagueIds: "1980",
+                             pinnacleLeagueIds: "5874",
                              parserTurn: "on",
                              parserTerm: 100,
-                             stakeValue: 300,
+                             stakeValue: 2,
                              minMaxStakeValue: 1000
                             ).save(failOnError: true)
         }
         if(!RobotTask.count()){
             new RobotTask(   status: null,
                              errorCode: null,
-                             eventId: '488029618',
-                             lineId: '216552524',
+                             eventId: '',
+                             lineId: '',
                              altLineId: null,                           
-                             periodNumber: 0,
-                             betType: "MONEYLINE",
-                             team: "Team1",
-                             side: "under"
+                             periodNumber: '',
+                             betType: "",
+                             team: "",
+                             side: ""
                          ).save(failOnError: true)
         }
         

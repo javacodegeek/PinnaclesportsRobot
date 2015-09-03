@@ -15,6 +15,7 @@ class RobotTask {
     String   betType
     String   team
     String   side
+    Float    minKoff
 
     static constraints = {
         dateCreate(nullable:true, blank: true)
@@ -30,6 +31,7 @@ class RobotTask {
         betType(nullable:true, blank: true)
         team(nullable:true, blank: true)
         side(nullable:true, blank: true)
+        minKoff(nullable:true, blank: true)
     }
     
     static mapping = {
@@ -47,6 +49,7 @@ class RobotTask {
         betType column: 'betType'
         team column: 'team'
         side column: 'side'
+        minKoff column: 'minKoff'
     }
     
 }
