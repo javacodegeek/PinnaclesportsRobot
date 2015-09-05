@@ -61,18 +61,18 @@ def json = []
 } else {
 def json = new JsonSlurper().parseText(rr.substring(1))
 
-json.each{j ->
-new RobotTask( status: null,
-errorCode: null,
-eventId: j.eventId,
-lineId: j.lineId,
-altLineId: j.altLineId,
-periodNumber: 0,
-betType: j.betType,
-minKoff: j.minKoff,
-team: j.team,
-side: j.side
-).save(flush: true)
+json.each{j ->                
+    new RobotTask( status: null,
+    errorCode: null,
+    eventId: j.eventId,
+    lineId: j.lineId,
+    altLineId: j.altLineId,
+    periodNumber: 0,
+    betType: j.betType,
+    minKoff: j.minKoff,
+    team: j.team,
+    side: j.side
+    ).save(flush: true)
 }
 }
 }
@@ -84,17 +84,18 @@ http.headers['Authorization'] = 'Basic '+"${DV.pinnacleLogin}:${DV.pinnaclePassw
 def resp = http.get(path: this.URL_FIXTURES, query: [sportid: DV.pinnacleSportId, leagueIds: DV.pinnacleLeagueIds], contentType: TEXT)
 def jdata = new JsonSlurper().parseText(resp.str)
 jdata.league.each{ league ->
-league.events.each{ event ->
-new Fixture(eventId: event.id,
-leagueId: league.id,
-home: event.home,
-away: event.away,
-rotNum: event.rotNum,
-liveStatus: event.liveStatus,
-status: event.status,
-starts: event.starts
-).save()
-}
+league.events.each{ event ->           
+        new Fixture(eventId: event.id,
+        leagueId: league.id,
+        home: event.home,
+        away: event.away,
+        rotNum: event.rotNum,
+        liveStatus: event.liveStatus,
+        status: event.status,
+        starts: event.starts,
+        md5Key: (event.home + event.away + league.id + "ACCEPTED").toString().encodeAsMD5()
+        ).save()
+    }
 }
 return true
 }

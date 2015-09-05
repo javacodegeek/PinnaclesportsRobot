@@ -188,7 +188,7 @@ class RobotJob {
                         
                             if ((dk >= 1.8d)&&(dk >= (double)(ev.mminKoff))){
                              
-                                        def process = [ 'bash', '-c', "curl --user ${DV.pinnacleLogin}:${DV.pinnaclePassword} -i --header 'Content-Type: application/json' -H 'Accept: text/json' --request 'POST' --data '$js' https://api.pinnaclesports.com/v1/bets/place" ].execute().text
+                                            def process = [ 'bash', '-c', "curl --user ${DV.pinnacleLogin}:${DV.pinnaclePassword} -i --header 'Content-Type: application/json' -H 'Accept: text/json' --request 'POST' --data '$js' https://api.pinnaclesports.com/v1/bets/place" ].execute().text
                                             def jsontext = process.substring(process.indexOf('{'))
                                             def jsonr = new JsonSlurper().parseText(jsontext)                 
                                              println jsonr
