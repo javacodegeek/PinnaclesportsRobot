@@ -11,6 +11,8 @@ class Fixture {
     String status
     String starts
     String md5Key 
+    
+    
     static constraints = {
         eventId(nullable:false, blank: false)
         leagueId(nullable:false, blank: false)

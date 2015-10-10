@@ -13,6 +13,8 @@ import static groovyx.net.http.Method.*
     
 class RobotJob {
     
+    
+    
     ParserService parserService
 
     static triggers = {
@@ -25,6 +27,7 @@ class RobotJob {
       
       if (eventList){
              eventList.each{ev ->
+                 
                 
                             def DV = DefaultValue.findByName("PINNACLESPORTSROBOT")
 
@@ -52,6 +55,8 @@ class RobotJob {
                                         }
                                         attributes.oddsFormat = "DECIMAL"
 
+                    
+                    
                                         def http = new HTTPBuilder(DV.pinnacleApiUrl)
                                         def result = null
                                             def js = (attributes as JSON).toString()
@@ -192,6 +197,8 @@ class RobotJob {
                                             def jsontext = process.substring(process.indexOf('{'))
                                             def jsonr = new JsonSlurper().parseText(jsontext)                 
                                              println jsonr
+                                             
+                        
                                              def e = RobotTask.get(ev.id)
                                              e.status = jsonr.status
                                              e.errorCode = jsonr.errorCode

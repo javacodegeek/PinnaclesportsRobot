@@ -16,6 +16,8 @@ class MaxJob {
     ParserService parserService
 
     static triggers = {
+        
+        
         simple startDelay: 20000, repeatInterval: 30000  
     }
     

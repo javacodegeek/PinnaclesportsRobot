@@ -15,6 +15,8 @@ class ParsingJob {
       if (DV.parserTurn == "on"){
             def unixTime = new Date().getTime()
             def diffTime = 0
+            
+            
             if (DV.lastAutoRun){
                 diffTime = unixTime - DV.lastAutoRun.getTime()
                 if(diffTime >= DV.parserTerm*1000){

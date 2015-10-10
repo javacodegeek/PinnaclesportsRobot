@@ -16,6 +16,8 @@ class RobotTask {
     String   team
     String   side
     Float    minKoff
+    
+    
 
     static constraints = {
         dateCreate(nullable:true, blank: true)
