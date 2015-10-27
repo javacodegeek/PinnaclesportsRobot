@@ -20,7 +20,7 @@ environments {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://localhost:3306/db_pnklsport"
+            url = "jdbc:mysql://176.8.203.194:3306/db_pnklsport"
             username = "root"
             password = "123"
         }

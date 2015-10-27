@@ -11,6 +11,7 @@ class Fixture {
     String status
     String starts
     String md5Key 
+    Integer betstatus = 0
     
     
     static constraints = {
@@ -23,6 +24,7 @@ class Fixture {
         status(nullable:false, blank: false)
         starts(nullable:false, blank: false)
         md5Key(nullable:false, blank: false, unique: true)
+        betstatus(nullable:false, blank: false)
 
     }
     
@@ -37,5 +39,6 @@ class Fixture {
         status column: 'status'
         starts column: 'starts'
         md5Key column: 'md5Key'
+        betstatus column: 'betstatus'
     }
 }
